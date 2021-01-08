@@ -16,7 +16,7 @@ Command Line Interface tool for code generation built in Go.
 
 <img src="docs/assets/go-gen%20logo.png" alt="go-gen logo" align="right" width="150px"/>
 
-go-gen is a CLI (Command Line Interface) tool for code generation of web applications. It generates code based on the user's needs that can be passed as input in the form of a file to the command.
+**go-gen** is a **[CLI](https://en.wikipedia.org/wiki/Command-line_interface)** tool for code generation of web applications. It generates code based on the user's needs that can be passed as input in the form of a file to the command.
 
 The objective of **go-gen** is to reduce development time of template code, while allowing **readability**, **scalability** and **testability**.
 
