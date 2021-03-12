@@ -1,6 +1,7 @@
 package generator
 
 type Project struct {
+	name         string
 	root         string
 	applications []*Application
 }
