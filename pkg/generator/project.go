@@ -1,13 +1,6 @@
 package generator
 
-import "os"
-
 func NewProject(projectRoot string) (*Project, error) {
-	err := os.MkdirAll(projectRoot, 0755)
-	if err != nil {
-		return nil, err
-	}
-
 	return &Project{projectRoot, []*Application{}}, nil
 }
 
