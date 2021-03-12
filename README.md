@@ -2,16 +2,6 @@
 
 Command Line Interface tool for code generation built in Go.
 
-## Table of Contents
-
-- [go-gen](#go-gen)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Technologies](#technologies)
-  - [Installation](#installation)
-  - [Functionalities](#functionalities)
-  - [Examples](#examples)
-
 ## Introduction
 
 <img src="assets/go-gen-logo.png" alt="go-gen logo" align="right" width="175px"/>
