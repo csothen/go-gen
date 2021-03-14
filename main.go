@@ -1,6 +1,10 @@
 package main
 
-import "github.com/csothen/go-gen/pkg/generator"
+import (
+	"fmt"
+
+	"github.com/csothen/go-gen/pkg/generator"
+)
 
 func main() {
 
@@ -18,11 +22,9 @@ func main() {
 	a1.NewService("app1_service")
 	a2.NewService("app2_service")
 
-	p.Describe()
-
-	// rootCmd := root.NewCmdRoot(build.Version, build.Date)
-
-	// if err := rootCmd.Execute(); err != nil {
-	// 	panic(err)
-	// }
+	//p.Describe()
+	err := p.Build()
+	if err != nil {
+		fmt.Println(err)
+	}
 }

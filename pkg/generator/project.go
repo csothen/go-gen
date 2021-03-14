@@ -2,11 +2,31 @@ package generator
 
 import (
 	"fmt"
+	"os"
 	"strings"
 )
 
 func NewProject(name, projectRoot string) (*Project, error) {
-	return &Project{name, projectRoot, []*Application{}}, nil
+	return &Project{name, projectRoot + name, []*Application{}}, nil
+}
+
+// Build : Builds the project following the structure established
+func (p *Project) Build() error {
+	if err := os.MkdirAll(p.root, 0755); err != nil {
+		return err
+	}
+
+	fmt.Println("Building project applications...")
+
+	for _, app := range p.applications {
+		if err := app.build(); err != nil {
+			return err
+		}
+	}
+
+	fmt.Println("Done!")
+
+	return nil
 }
 
 func (p *Project) NewApplication(name string) *Application {
@@ -79,11 +99,6 @@ func (p *Project) Describe() error {
 		}
 	}
 
-	return nil
-}
-
-// Create : Creates the project following the structure established
-func (p *Project) Create() error {
 	return nil
 }
 

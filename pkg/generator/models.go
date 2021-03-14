@@ -15,9 +15,9 @@ type Application struct {
 }
 
 type Endpoint struct {
-	httpMethod       string
-	path             string
-	controllerMethod string
+	httpMethod string
+	route      string
+	handler    string
 }
 
 type Controller struct {
@@ -41,6 +41,6 @@ type Model struct {
 type Structure []Attribute
 
 type Attribute struct {
-	name  string
-	_type string
+	name    string
+	atrType string
 }
